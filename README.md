@@ -15,6 +15,14 @@ requirements. It also adds a new **Projects** tile that showcases past
 coursework, including the Week 4 "SecureStack" business website, as a
 CSS Grid card layout.
 
+## 🔗 Live Demo & Documentation
+
+**Live Demo:** [View Portfolio](https://arathism.github.io/week5_Portfolio/)
+**Full Documentation:** [Project Documentation (PDF)](ADD-YOUR-SHAREABLE-LINK-HERE)
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://arathism.github.io/week5_Portfolio/)
+[![Docs](https://img.shields.io/badge/docs-PDF-blue)](ADD-YOUR-SHAREABLE-LINK-HERE)
+
 ## Setup Instructions
 
 1. Download or clone this folder.
