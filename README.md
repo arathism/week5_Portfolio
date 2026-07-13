@@ -22,26 +22,6 @@ requirements. It also adds a new **Projects** tile that showcases past
 coursework, including the Week 4 "SecureStack" business website, as a
 CSS Grid card layout.
 
-## Screenshots
-
-| Light Theme | Dark Theme |
-|---|---|
-| ![Light theme desktop view](screenshots/light-desktop.png) | ![Dark theme desktop view](screenshots/dark-desktop.png) |
-
-| Mobile View | Mobile Nav Open |
-|---|---|
-| ![Mobile view](screenshots/mobile-view.png) | ![Mobile navigation open](screenshots/mobile-nav-open.png) |
-
-**Projects Section**
-![Projects section with CSS Grid cards](screenshots/projects-section.png)
-
-**To-Do List**
-![To-do list with one task done, one active](screenshots/todo-list.png)
-
-| Contact Form — Validation Error | Contact Form — Success |
-|---|---|
-| ![Form showing validation errors](screenshots/form-invalid.png) | ![Form showing success message](screenshots/form-valid.png) |
-
 ## Setup Instructions
 
 1. Download or clone this folder.
