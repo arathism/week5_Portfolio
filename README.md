@@ -1,10 +1,10 @@
 # Week 5 — Advanced Portfolio with CSS Grid
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://arathism.github.io/week5_Portfolio/)
-[![Docs](https://img.shields.io/badge/docs-PDF-blue)](ADD-YOUR-SHAREABLE-DOC-LINK-HERE)
+[![Docs](https://img.shields.io/badge/docs-DOCX-blue)](https://github.com/arathism/week5_Portfolio/blob/main/Week5_Portfolio_Documentation.docx)
 
 🔗 **Live Demo:** [arathism.github.io/week5_Portfolio](https://arathism.github.io/week5_Portfolio/)
-📄 **Full Documentation:** [Project Documentation (PDF)](ADD-YOUR-SHAREABLE-DOC-LINK-HERE)
+📄 **Full Documentation:** [Project Documentation](https://github.com/arathism/week5_Portfolio/blob/main/Week5_Portfolio_Documentation.docx)
 💻 **Repository:** [github.com/arathism/week5_Portfolio](https://github.com/arathism/week5_Portfolio)
 
 ## Project Overview
