@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureStack — Web Development &amp; Cybersecurity Consulting</title>
+<meta name="description" content="SecureStack builds and secures websites and web apps for small businesses: development, security audits, and ongoing hardening in one team.">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <img src="images/logo.svg" alt="" width="30" height="30">
+      SecureStack<span class="brand-tag">.</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="index.html" aria-current="page">home</a></li>
+      <li><a href="services.html">services</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="contact.html" class="nav-cta">get a quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">whoami</p>
+        <h1>We build web products, then we try to break in.</h1>
+        <p class="lede">SecureStack is a small studio that designs, develops, and security-hardens websites and web apps for growing businesses — one team for both jobs, so nothing gets lost in the handoff.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Start a project</a>
+          <a href="services.html" class="btn btn-ghost">See services</a>
+        </div>
+      </div>
+
+      <div class="terminal" role="img" aria-label="Terminal window showing a mock exchange: whoami returns SecureStack, a small team of developers and security engineers building and defending web products since 2021.">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <div class="terminal-body" data-terminal-body aria-hidden="true">
+          <div class="line"><span class="prompt">$</span> whoami</div>
+          <div class="line">&gt; SecureStack — devs + security engineers</div>
+          <div class="line">&gt; est. 2021 · Hubballi-Dharwad, IN</div>
+          <div class="line"><span class="prompt">$</span> ./run_audit.sh client-site</div>
+          <div class="line">&gt; scanning... 0 critical, 2 fixed</div>
+          <div class="line">&gt; site is live and locked down <span class="caret"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section>
+    <div class="container">
+      <div class="stats">
+        <div class="stat"><div class="num">60+</div><div class="label">sites shipped</div></div>
+        <div class="stat"><div class="num">120+</div><div class="label">vulnerabilities patched</div></div>
+        <div class="stat"><div class="num">4.9/5</div><div class="label">average client rating</div></div>
+        <div class="stat"><div class="num">48h</div><div class="label">avg. audit turnaround</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services preview -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">services</p>
+        <h2>Two disciplines, one delivery team</h2>
+        <p>Most agencies build the site or secure the site. We do both, so the same people who wrote the code are the ones checking it for holes.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3 3 12l5 9M16 3l5 9-5 9"/></svg>
+          </div>
+          <span class="tag">development</span>
+          <h3>Website &amp; web app builds</h3>
+          <p>Responsive, accessible sites and small web apps, built with clean semantic code and a fast, lightweight footprint.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+          </div>
+          <span class="tag">security</span>
+          <h3>Security audits &amp; hardening</h3>
+          <p>Manual and automated checks for XSS, injection, auth flaws, and misconfigurations — with a plain-English fix list.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+          </div>
+          <span class="tag">care plan</span>
+          <h3>Ongoing monitoring</h3>
+          <p>Monthly uptime checks, dependency updates, and a quarterly re-scan so security doesn't expire after launch day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">process</p>
+        <h2>How a project actually runs</h2>
+        <p>Four steps, in this order, every time — because skipping the audit until "later" is how sites end up in the news.</p>
+      </div>
+      <div class="process">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div><h3>Scope &amp; wireframe</h3><p>We map pages, content, and the one thing each page needs a visitor to do.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div><h3>Build</h3><p>Semantic HTML, mobile-first CSS, and only the JavaScript the page actually needs.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div><h3>Audit</h3><p>We attack our own build — forms, inputs, headers — before anyone else can.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div><h3>Ship &amp; monitor</h3><p>Deploy, then keep watching: uptime, dependencies, and a repeat scan each quarter.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Have a site that needs building — or checking?</h2>
+          <p>Tell us what you've got. We'll tell you honestly what it needs.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get a free quote</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 0.75rem; display:flex;">
+          <img src="images/logo.svg" alt="" width="26" height="26">
+          SecureStack
+        </a>
+        <p style="max-width: 32ch; font-size: 0.9rem;">Web development and cybersecurity consulting for small and growing businesses.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#development">Development</a></li>
+          <li><a href="services.html#security">Security audits</a></li>
+          <li><a href="services.html#care">Care plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@securestack.example">hello@securestack.example</a></li>
+          <li><a href="tel:+918000000000">+91 80000 00000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SecureStack. All rights reserved.</span>
+      <span>Built for The Developers Arena — Week 4 project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

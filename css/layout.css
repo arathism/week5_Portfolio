@@ -1,0 +1,411 @@
+/* ============================================
+   LAYOUT.CSS
+   CSS Grid + Flexbox structural layout, mobile-first responsive rules
+   ============================================ */
+
+/* ---------- Navbar: Flexbox ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 1.2rem;
+  background: var(--gradient-navbar);
+  color: #fff;
+  gap: var(--space-sm);
+}
+
+.navbar__logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar__toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  order: 2;
+  margin-left: auto;
+}
+
+.navbar__toggle-bar {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  transition: transform var(--duration-fast) ease, opacity var(--duration-fast) ease;
+}
+
+.navbar__links {
+  order: 4;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-base) var(--ease-out);
+}
+
+.navbar__links--open {
+  max-height: 220px;
+  padding-top: var(--space-xs);
+}
+
+.navbar__link {
+  display: block;
+  padding: 0.35rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.navbar__mode-btn {
+  order: 1;
+  position: relative;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 700px) {
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__links {
+    order: 2;
+    flex-basis: auto;
+    flex-direction: row;
+    gap: var(--space-md);
+    max-height: none;
+    overflow: visible;
+  }
+
+  .navbar__mode-btn {
+    order: 3;
+  }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem 4rem;
+  background: var(--gradient-hero);
+  color: #fff;
+}
+
+.hero__title {
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ---------- Tile grid: CSS Grid (main layout system) ---------- */
+.tile-grid {
+  max-width: var(--container-width);
+  margin: -2rem auto 0;
+  padding: 0 1.2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  position: relative;
+  z-index: 2;
+}
+
+.tile-grid__tile {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 6px 18px rgba(30, 40, 70, 0.08);
+}
+
+.tile-grid__tile--wide {
+  grid-column: span 2;
+}
+
+.tile-grid__heading {
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 0.6rem;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 700px) {
+  .tile-grid {
+    grid-template-columns: 1fr;
+    margin-top: -1.5rem;
+  }
+  .tile-grid__tile--wide {
+    grid-column: span 1;
+  }
+}
+
+/* ---------- About: Flexbox ---------- */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about__text {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.about__photo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 700px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ---------- Skills: Flexbox (wrap) ---------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skills__box {
+  background: var(--color-surface-alt);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ---------- To-do list ---------- */
+.todo__input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.todo__input {
+  flex: 1;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.todo__list {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.todo__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-surface-alt);
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.todo__item--done .todo__item-text {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.todo__remove-btn {
+  background: var(--color-danger);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+/* ---------- Projects: CSS Grid (cards) ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.3rem;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.project-card__title {
+  font-size: 1rem;
+}
+
+.project-card__text {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-card__tag {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.project-card__links {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.project-card__link {
+  font-size: 0.82rem;
+}
+
+.project-card__link--ghost {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Contact form: Grid ---------- */
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form__group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form__label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.contact-form__input {
+  padding: 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.85rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.contact-form__input--area {
+  resize: vertical;
+}
+
+.contact-form__error {
+  color: var(--color-danger);
+  font-size: 0.78rem;
+  min-height: 1rem;
+  display: block;
+}
+
+.contact-form__success {
+  color: var(--color-success);
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.contact-form__connect {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-form__connect-label {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.contact-form__connect-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+@media (max-width: 700px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 1.3rem;
+}
+
+.site-footer__text {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}

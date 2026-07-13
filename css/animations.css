@@ -1,0 +1,230 @@
+/* ============================================
+   ANIMATIONS.CSS
+   Keyframes, transitions, hover/focus effects, advanced selectors & pseudo-elements
+   ============================================ */
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-3px); }
+  40%, 60% { transform: translateX(3px); }
+}
+
+/* ---------- Tile entrance animation, staggered by position ---------- */
+.tile-grid__tile {
+  animation: fadeInUp 0.5s var(--ease-out) both;
+  transition: box-shadow var(--duration-base) ease, transform var(--duration-base) ease;
+}
+
+.tile-grid__tile:nth-child(1) { animation-delay: 0.05s; }
+.tile-grid__tile:nth-child(2) { animation-delay: 0.12s; }
+.tile-grid__tile:nth-child(3) { animation-delay: 0.19s; }
+.tile-grid__tile:nth-child(4) { animation-delay: 0.26s; }
+
+.tile-grid__tile:hover {
+  box-shadow: 0 10px 24px rgba(30, 40, 70, 0.13);
+  transform: translateY(-2px);
+}
+
+/* ---------- Skill boxes: hover + advanced selector (nth-child stagger) ---------- */
+.skills__box {
+  transition: transform var(--duration-fast) ease, background var(--duration-fast) ease, color var(--duration-fast) ease;
+}
+
+.skills__box:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Alternate subtle tint using :nth-child (advanced selector) */
+.skills__box:nth-child(odd) {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.skills__box:nth-child(even) {
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* ---------- To-do items: entrance + hover ---------- */
+.todo__item {
+  animation: popIn 0.25s var(--ease-out) both;
+  transition: transform var(--duration-fast) ease;
+}
+
+.todo__item:hover {
+  transform: translateX(2px);
+}
+
+.todo__remove-btn {
+  transition: background var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.todo__remove-btn:hover {
+  background: #b53838;
+  transform: scale(1.05);
+}
+
+/* ---------- Project cards: hover + tag interaction ---------- */
+.project-card {
+  transition: transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30, 40, 70, 0.12);
+}
+
+.project-card__tag {
+  transition: background var(--duration-fast) ease, color var(--duration-fast) ease;
+}
+
+.project-card__tag:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.project-card__link--ghost {
+  position: relative;
+}
+
+.project-card__link--ghost::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transition: width var(--duration-fast) var(--ease-out);
+}
+
+.project-card__link--ghost:hover::after,
+.project-card__link--ghost:focus-visible::after {
+  width: 100%;
+}
+
+.contact-form__connect-link {
+  transition: background var(--duration-fast) ease, color var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.contact-form__connect-link:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ---------- Nav link underline using ::after pseudo-element ---------- */
+.navbar__link {
+  position: relative;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--color-highlight);
+  transition: width var(--duration-fast) var(--ease-out);
+}
+
+.navbar__link:hover::after,
+.navbar__link:focus-visible::after {
+  width: 100%;
+}
+
+.navbar__link:hover,
+.navbar__link:focus-visible {
+  color: var(--color-highlight);
+}
+
+/* ---------- Mode toggle icon swap (::before/::after style cross-fade) ---------- */
+.navbar__mode-icon {
+  position: absolute;
+  transition: opacity var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.navbar__mode-icon--sun {
+  opacity: 0;
+  transform: scale(0.6) rotate(45deg);
+}
+
+[data-theme="light"] .navbar__mode-icon--moon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+[data-theme="light"] .navbar__mode-icon--sun {
+  opacity: 0;
+}
+
+[data-theme="dark"] .navbar__mode-icon--moon {
+  opacity: 0;
+}
+
+[data-theme="dark"] .navbar__mode-icon--sun {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+/* ---------- Nav toggle (hamburger -> X) ---------- */
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ---------- Form validation states ---------- */
+.contact-form__input {
+  transition: border-color var(--duration-fast) ease;
+}
+
+.contact-form__input.is-invalid {
+  border-color: var(--color-danger);
+  animation: shake 0.35s ease;
+}
+
+.contact-form__input.is-valid {
+  border-color: var(--color-success);
+}
+
+/* Empty-state styling for the to-do list using :empty (advanced selector) */
+.todo__list:empty::before {
+  content: 'No tasks yet — add one above.';
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  font-style: italic;
+  padding: 0.4rem 0.1rem;
+}

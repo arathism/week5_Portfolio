@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arathi Munavalli | Portfolio</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (Flexbox) ===== -->
+  <header class="navbar">
+    <h2 class="navbar__logo">SM_A</h2>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+    </button>
+
+    <nav>
+      <ul class="navbar__links" id="navLinks">
+        <li class="navbar__item"><a class="navbar__link" href="#about">About</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="#skills">Skills</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="#projects">Projects</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="#todo">To-Do</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Interactive Feature 1: Dark / Light mode toggle (CSS variables theme system) -->
+    <button id="modeToggle" class="navbar__mode-btn" title="Toggle dark mode" aria-label="Toggle dark mode">
+      <span class="navbar__mode-icon navbar__mode-icon--moon">🌙</span>
+      <span class="navbar__mode-icon navbar__mode-icon--sun">☀️</span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1 class="hero__title">Hi, I'm Arathi Shekhar Munavalli</h1>
+    <p class="hero__subtitle">Final-Year CSE Student · Open to Internships</p>
+  </section>
+
+  <!-- ===== TILE GRID (CSS Grid) ===== -->
+  <main class="tile-grid">
+
+    <!-- ABOUT TILE -->
+    <section id="about" class="tile-grid__tile tile-grid__tile--wide">
+      <h2 class="tile-grid__heading">About Me</h2>
+      <div class="about">
+        <img src="images/profile.jpg" alt="Arathi Shekhar Munavalli" class="about__photo">
+        <p class="about__text">I'm a final-year Computer Science and Engineering student who loves the
+           moment a stubborn bug finally gives up and the code just works. My focus these days
+           is full-stack development, AI-powered applications, and cybersecurity — I like
+           understanding not just how to build something, but how someone might try to break it,
+           and building it to hold up anyway. Outside of coursework I've picked up hands-on
+           experience through internships and hackathons, and I'm always looking for the next
+           problem worth solving. Take a look at the Projects tile below for what that's turned
+           into so far — and I'm currently open to internship and full-time opportunities where
+           I can keep learning by building.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS TILE -->
+    <section id="skills" class="tile-grid__tile">
+      <h2 class="tile-grid__heading">Skills</h2>
+      <div class="skills">
+        <div class="skills__box">HTML / CSS</div>
+        <div class="skills__box">JavaScript</div>
+        <div class="skills__box">React</div>
+        <div class="skills__box">Node.js</div>
+        <div class="skills__box">Python</div>
+        <div class="skills__box">MongoDB</div>
+      </div>
+    </section>
+
+    <!-- TO-DO TILE -->
+    <!-- Interactive Feature 2: To-do list with add/remove -->
+    <section id="todo" class="tile-grid__tile">
+      <h2 class="tile-grid__heading">Quick To-Do List</h2>
+      <div class="todo__input-row">
+        <input type="text" id="todoInput" class="todo__input" placeholder="Add a task...">
+        <button id="addTodoBtn" class="btn btn--accent">Add</button>
+      </div>
+      <ul id="todoList" class="todo__list"></ul>
+    </section>
+
+    <!-- PROJECTS TILE -->
+    <section id="projects" class="tile-grid__tile tile-grid__tile--wide">
+      <h2 class="tile-grid__heading">Projects</h2>
+      <div class="projects">
+
+        <article class="project-card">
+          <div class="project-card__body">
+            <h3 class="project-card__title">SecureStack</h3>
+            <p class="project-card__text">
+              A multi-page business website for a fictional web-development &amp; cybersecurity
+              consulting studio. Built with semantic HTML, a mobile-first Grid/Flexbox layout,
+              and vanilla JS form validation using the Constraint Validation API. Includes
+              Home, Services, About, and Contact pages with a shared design system.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML5</span>
+              <span class="project-card__tag">CSS Grid</span>
+              <span class="project-card__tag">Flexbox</span>
+              <span class="project-card__tag">Vanilla JS</span>
+              <span class="project-card__tag">Accessibility</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://arathism.github.io/week4_Portfolio/" target="_blank" rel="noopener" class="btn btn--accent project-card__link">View Project</a>
+              <a href="https://github.com/arathism/week4_Portfolio" target="_blank" rel="noopener" class="project-card__link project-card__link--ghost">Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__body">
+            <h3 class="project-card__title">This Portfolio</h3>
+            <p class="project-card__text">
+              The site you're looking at — a personal portfolio rebuilt with CSS Grid for the
+              main layout, Flexbox for components, CSS custom properties for a light/dark theme
+              system, keyframe animations, and BEM naming throughout.
+            </p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">CSS Grid</span>
+              <span class="project-card__tag">CSS Variables</span>
+              <span class="project-card__tag">BEM</span>
+              <span class="project-card__tag">Animations</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://arathism.github.io" target="_blank" rel="noopener" class="btn btn--accent project-card__link">View Project</a>
+              <a href="https://github.com/arathism" target="_blank" rel="noopener" class="project-card__link project-card__link--ghost">Source Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT TILE -->
+    <!-- Interactive Feature 3: Real-time form validation -->
+    <section id="contact" class="tile-grid__tile tile-grid__tile--wide">
+      <h2 class="tile-grid__heading">Contact Me</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="contact-form__row">
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="name">Name</label>
+            <input type="text" id="name" name="name" class="contact-form__input">
+            <span class="contact-form__error" id="nameError"></span>
+          </div>
+
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="email">Email</label>
+            <input type="text" id="email" name="email" class="contact-form__input">
+            <span class="contact-form__error" id="emailError"></span>
+          </div>
+        </div>
+
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="message">Message</label>
+          <textarea id="message" name="message" class="contact-form__input contact-form__input--area" rows="4"></textarea>
+          <span class="contact-form__error" id="messageError"></span>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn--accent">Send Message</button>
+        <p id="formSuccess" class="contact-form__success"></p>
+      </form>
+      <div class="contact-form__connect">
+        <span class="contact-form__connect-label">Or find me here:</span>
+        <a href="https://github.com/arathism" target="_blank" rel="noopener" class="contact-form__connect-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/arathishekharmunavalli/" target="_blank" rel="noopener" class="contact-form__connect-link">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">Arathi Shekhar Munavalli · Computer Science &amp; Engineering</p>
+  </footer>
+
+  <script src="js/theme-switcher.js"></script>
+</body>
+</html>

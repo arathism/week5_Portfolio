@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — SecureStack</title>
+<meta name="description" content="Web development, security audits, and ongoing care plans from SecureStack, with transparent pricing tiers.">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <img src="images/logo.svg" alt="" width="30" height="30">
+      SecureStack<span class="brand-tag">.</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="index.html">home</a></li>
+      <li><a href="services.html" aria-current="page">services</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="contact.html" class="nav-cta">get a quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">ls services/</p>
+      <h1>What we do, in plain terms</h1>
+      <p>Three services that work as well together as they do apart. Pick one, or let us bundle them into a single project.</p>
+    </div>
+  </section>
+
+  <section id="development">
+    <div class="container">
+      <div class="hero-grid" style="align-items:start;">
+        <div>
+          <span class="tag">01 · development</span>
+          <h2>Website &amp; web app builds</h2>
+          <p>Multi-page business sites, landing pages, and small internal tools — built with semantic HTML, mobile-first CSS, and just enough JavaScript to make things work.</p>
+          <ul style="display:grid; gap:0.6rem; margin-top:1rem;">
+            <li>— Custom design, not a template swap</li>
+            <li>— Fully responsive, tested from 320px up</li>
+            <li>— Optimized images and assets for fast load</li>
+            <li>— Accessible markup: labels, alt text, keyboard nav</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Typical timeline</h3>
+          <div class="process">
+            <div class="process-step"><div class="step-num">01</div><div><h3 style="margin:0;">Day 1–2</h3><p style="margin:0;">Wireframes &amp; content plan</p></div></div>
+            <div class="process-step"><div class="step-num">02</div><div><h3 style="margin:0;">Day 3–4</h3><p style="margin:0;">Build &amp; style all pages</p></div></div>
+            <div class="process-step"><div class="step-num">03</div><div><h3 style="margin:0;">Day 5–6</h3><p style="margin:0;">Test, optimize, fix bugs</p></div></div>
+            <div class="process-step"><div class="step-num">04</div><div><h3 style="margin:0;">Day 7</h3><p style="margin:0;">Deploy &amp; handover docs</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="security" class="section-alt">
+    <div class="container">
+      <div class="hero-grid" style="align-items:start;">
+        <div class="card" style="order:2;">
+          <h3>What the report covers</h3>
+          <ul style="display:grid; gap:0.6rem;">
+            <li>— XSS &amp; HTML injection points</li>
+            <li>— Form &amp; input validation gaps</li>
+            <li>— Authentication &amp; session handling</li>
+            <li>— Server &amp; header misconfigurations</li>
+            <li>— A prioritized, plain-English fix list</li>
+          </ul>
+        </div>
+        <div style="order:1;">
+          <span class="tag">02 · security</span>
+          <h2>Security audits &amp; hardening</h2>
+          <p>Manual testing first — the kind of poking around an automated scanner misses — backed by standard tools to catch the rest. You get a report ranked by real-world severity, not a wall of low-priority warnings.</p>
+          <p>Built for teams who need to know what's actually exploitable before launch, not just a checklist marked "pass."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="care">
+    <div class="container">
+      <span class="tag">03 · care plan</span>
+      <h2>Ongoing monitoring</h2>
+      <p style="max-width: 60ch;">Security isn't a one-time stamp. Care plan clients get uptime checks, dependency updates, and a full re-scan every quarter — so the site that passed its audit in January isn't quietly out of date by June.</p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head text-center" style="margin-left:auto; margin-right:auto; text-align:center;">
+        <p class="eyebrow">pricing</p>
+        <h2>Straightforward packages</h2>
+        <p style="margin-left:auto; margin-right:auto;">Every project is scoped individually — these are starting points, not final quotes.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="plan">
+          <span class="tag">starter</span>
+          <h3>Business Site</h3>
+          <div class="price">₹18,000<small> / project</small></div>
+          <ul>
+            <li>Up to 5 pages</li>
+            <li>Responsive design</li>
+            <li>Contact form with validation</li>
+            <li>Basic on-page SEO</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost" style="border-color: var(--border);">Get this quote</a>
+        </div>
+        <div class="plan is-featured">
+          <span class="tag">most booked</span>
+          <h3>Build + Audit</h3>
+          <div class="price">₹32,000<small> / project</small></div>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>Full security audit before launch</li>
+            <li>Fix list with severity ranking</li>
+            <li>1 month post-launch support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Get this quote</a>
+        </div>
+        <div class="plan">
+          <span class="tag">ongoing</span>
+          <h3>Care Plan</h3>
+          <div class="price">₹4,500<small> / month</small></div>
+          <ul>
+            <li>Uptime &amp; dependency monitoring</li>
+            <li>Quarterly re-scan</li>
+            <li>Priority bug fixes</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost" style="border-color: var(--border);">Get this quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom: 0.75rem; display:flex;">
+          <img src="images/logo.svg" alt="" width="26" height="26">
+          SecureStack
+        </a>
+        <p style="max-width: 32ch; font-size: 0.9rem;">Web development and cybersecurity consulting for small and growing businesses.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#development">Development</a></li>
+          <li><a href="services.html#security">Security audits</a></li>
+          <li><a href="services.html#care">Care plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@securestack.example">hello@securestack.example</a></li>
+          <li><a href="tel:+918000000000">+91 80000 00000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SecureStack. All rights reserved.</span>
+      <span>Built for The Developers Arena — Week 4 project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
