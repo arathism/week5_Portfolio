@@ -1,5 +1,12 @@
 # Week 5 — Advanced Portfolio with CSS Grid
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://arathism.github.io/week5_Portfolio/)
+[![Docs](https://img.shields.io/badge/docs-PDF-blue)](ADD-YOUR-SHAREABLE-DOC-LINK-HERE)
+
+🔗 **Live Demo:** [arathism.github.io/week5_Portfolio](https://arathism.github.io/week5_Portfolio/)
+📄 **Full Documentation:** [Project Documentation (PDF)](ADD-YOUR-SHAREABLE-DOC-LINK-HERE)
+💻 **Repository:** [github.com/arathism/week5_Portfolio](https://github.com/arathism/week5_Portfolio)
+
 ## Project Overview
 
 This is Arathi Shekhar Munavalli's personal portfolio (originally built in
@@ -15,13 +22,25 @@ requirements. It also adds a new **Projects** tile that showcases past
 coursework, including the Week 4 "SecureStack" business website, as a
 CSS Grid card layout.
 
-## 🔗 Live Demo & Documentation
+## Screenshots
 
-**Live Demo:** [View Portfolio](https://arathism.github.io/week5_Portfolio/)
-**Full Documentation:** [Project Documentation (PDF)](ADD-YOUR-SHAREABLE-LINK-HERE)
+| Light Theme | Dark Theme |
+|---|---|
+| ![Light theme desktop view](screenshots/light-desktop.png) | ![Dark theme desktop view](screenshots/dark-desktop.png) |
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://arathism.github.io/week5_Portfolio/)
-[![Docs](https://img.shields.io/badge/docs-PDF-blue)](ADD-YOUR-SHAREABLE-LINK-HERE)
+| Mobile View | Mobile Nav Open |
+|---|---|
+| ![Mobile view](screenshots/mobile-view.png) | ![Mobile navigation open](screenshots/mobile-nav-open.png) |
+
+**Projects Section**
+![Projects section with CSS Grid cards](screenshots/projects-section.png)
+
+**To-Do List**
+![To-do list with one task done, one active](screenshots/todo-list.png)
+
+| Contact Form — Validation Error | Contact Form — Success |
+|---|---|
+| ![Form showing validation errors](screenshots/form-invalid.png) | ![Form showing success message](screenshots/form-valid.png) |
 
 ## Setup Instructions
 
@@ -171,13 +190,5 @@ errors in either:
 - **Reduced motion:** simulated `prefers-reduced-motion: reduce` — all
   animations and transitions become effectively instant.
 
-See `/screenshots`: `light-desktop.png`, `dark-desktop.png`,
-`mobile-view.png`, `mobile-nav-open.png`, `projects-section.png`,
-`todo-list.png` (one task done, one active), `form-invalid.png` (validation
-errors shown), `form-valid.png` (success message after correction).
-
-## Known Limitations / Next Steps
-- Screenshots need to be captured fresh (light/dark, desktop/mobile, and a
-  Projects-tile shot) and dropped into `/screenshots` before zipping for
-  submission.
+## Notes
 - No CSS minification/build step is included per assignment scope.
